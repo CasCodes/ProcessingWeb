@@ -1,0 +1,31 @@
+##TODO:
+  !!NAVBAR LINKS MÜSSEN FÜR JEDE ABOUT PAGE NEU GEMACHT WERDEN!!
+  Chapter design ausdenken
+    Idee: Code Felder, code mit highlight.js
+        -> Anker
+        -> Kopier Funktion & Download
+    Idee: Unter die beschreibung eine "Best-of" Screenshot Gallerie
+  Chapter padding dynamisch machen
+  
+##in Progress:
+  -Space Invaders
+
+##Done:
+  -'>' on buttons
+  -Arcade Buttons
+  -Dino Game
+  Arcade Maschine in home (Mit auswahl von Games)
+  Home button auf chapter pages
+  -abstand zwischen txt und unten buttons
+  -Chapter Vorlage ur mom
+  -DropDown Scrollable
+  -Drop down für jeden Namen
+  -Navbar center
+  -color highlighting im text
+  -Spacing zwischen Buttons
+  -Neuen Style für links in Navbar(Gelb und nicht unterstrichen)
+  -Knöpfe in vincent.html (Nav bar und home button) sind iwie zu groß
+  -liner flex
+ 
+  ##Notes
+  -Netlify Server hosting 

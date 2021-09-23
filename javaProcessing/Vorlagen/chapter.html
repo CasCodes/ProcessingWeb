@@ -1,0 +1,67 @@
+<!--VORLAGE FÜR CHAPTER-->
+<!DOCTYPE html>
+<style>
+  pre {
+    font-size: 15px;
+  }
+
+</style>
+<html lang="de">
+<link rel="stylesheet" href="../../style.css">
+
+
+<body>
+  <center>
+    <h1>Processing Chapter 1</h1>
+    <!-- Download Buttons (pls use .zip compiled folders)-->
+    <div class="vertical-buttons">
+    <p>Download all chapters (1-4)</p>
+    <a href="#" class="rcorners" download="#"> >Download MARKDOWN</a>
+    <a href="#" class="rcorners" download="#"> >Download PDF</a>
+    </div>
+    <!-- Text -->
+    <h2>1.1a <h2>
+      <p>Describtion</p>
+      <pre class="green"></pre>
+      
+<!--Floating Home Button-->
+  <div class="fab-container">
+    <button class="fab-icon-holder" onclick="window.location.href='../../index.html'">HOME</button>
+  </div>
+
+</center>
+</body>
+</html>
+
+<script>
+  function download(file, text) {
+              
+    //creating an invisible element
+    var element = document.createElement('a');
+    element.setAttribute('href', 
+    'data:text/plain;charset=utf-8, '
+    + encodeURIComponent(text));
+    element.setAttribute('download', file);
+              
+    // Above code is equivalent to
+    // <a href="path of file" download="file name">
+              
+    document.body.appendChild(element);
+              
+    //onClick property
+    element.click();
+              
+    document.body.removeChild(element);
+    }
+              
+    // Start file download.
+    document.getElementById("btn")
+    .addEventListener("click", function() {
+    // Generate download of hello.txt 
+    // file with some content
+    var text = document.getElementById("text").value;
+    var filename = "GFG.txt";
+              
+    download(filename, text);
+    }, false);
+</script>

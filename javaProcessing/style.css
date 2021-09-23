@@ -1,0 +1,235 @@
+
+/*#colors: 
+	yellow 	#EEC563
+	purple 	#BD6AF6
+	blue 	#01A1DF
+	red 	#EC8F1D
+	green  	#18CF9E 
+	
+	back 	#19232D
+	text 	#BFBFBF           
+*/
+.yellow {
+	color:#EEC563;
+}
+.blue {
+	color: #01A1DF;
+}
+.green {
+	color: #18CF9E;
+}
+.purple {
+  color: #BD6AF6;
+}
+ul {
+  border-radius: 30px;
+  display: flex;
+  align-items: stretch;
+	list-style-type: none;  
+  justify-content: center;
+  width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #29292900;
+}
+li {
+	float: left;
+  align-self: center;
+  display: block;
+  flex: 1 1 auto; /* Default */
+  list-style-type: none;
+}
+li a {
+  border-radius: 25px;
+	display: block;
+	color: #EEC563;
+	text-align: center;
+  font-family: monospace;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover {
+	color: #BD6AF6;
+	background-color: #111;
+  }
+body {
+  background-color: #19232D;
+} 
+h1 {
+  color: #EEC563;
+	font-family: monospace;
+}
+h2 {
+	color: #BD6AF6;
+	font-family: monospace;
+}
+.ascii {
+    color: #EEC563;
+}
+.liner {
+  font-size: clamp(12px, 4vw, 40px);
+	color: #BFBFBF;
+}
+p {
+  font-family: monospace;
+	color: #BFBFBF;
+	letter-spacing: 1px;
+  font-size: 16px;
+}
+/*rounded corner buttons*/
+.rcorners {
+  font-family: monospace;
+  border-radius: 25px;
+  padding: 5px; 
+  width: 300;
+  height: px;
+}
+/*Vertical buttons*/
+.vertical-buttons {
+  width: 200px;
+}
+.vertical-buttons a {
+  margin: 20px;
+  background-color: #292929;
+  color: #EEC563;
+  display: block;
+  padding: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+.vertical-buttons a:hover {
+  color: #BD6AF6;
+  background-color: #292929;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  border-radius: 25px;
+	display: block;
+	color: #EEC563;
+	text-align: center;
+  font-family: monospace;
+	padding: 10px 14px;
+	text-decoration: none;
+}
+
+/* Add a purple background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: #BD6AF6;
+}
+.dropbtn {
+  background-color: #292929;
+  margin-right: 20px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  border-radius: 16px;
+  display: none;
+  position: absolute;
+  background-color: #292929;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  max-height: 150px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #EEC563;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #3a3a3a;
+  color: #BD6AF6
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*Floating Home Button*/
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.fab-icon-holder {
+  color: #EEC563;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #292929;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.fab-icon-holder:hover {
+  opacity: 0.8;
+  color: #BD6AF6;
+}
+
+.lizzy{ /*SIMP*/
+  width: 175px;
+  height: 130px;
+  box-shadow: 0 0 60px #4b5b61;
+}
+
+.code_field{
+  background: #292929;
+  border-radius:23px;
+  height: auto;
+  width: auto;
+  max-height: 400px;
+  max-width: 600px;
+  box-shadow: 10px 5px;
+}
+
+.code{
+  border-radius: 23px;
+  text-align: left;
+  height: auto;
+  width: auto;
+  max-height: 400px;
+  max-width: 600px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  box-shadow: 10px 5px;
+}
+
+.top-left {
+  color: #BD6AF6;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.task_letter {
+  text-align: left;
+  color: #BD6AF6;
+  position: relative;
+}
+
+.task_letter_holder {
+  max-width: 600px;
+}

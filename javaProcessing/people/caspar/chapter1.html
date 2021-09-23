@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<style>
+  body{
+    padding-left: 150px;
+    padding-right:150px;
+  }
+  pre {
+    font-size: 15px;
+  }
+  .infotext {
+    font-family: monospace;
+	  color: #EEC563;
+    font-size: 13px;
+  }
+</style>
+<html lang="de">
+<link rel="stylesheet" href="../../style.css">
+
+<body>
+  <center>
+    <h1>Processing Chapter 1</h1>
+  <!-- Download Buttons -->
+  <div class="vertical-buttons">
+    <p>Download all chapters</p>
+    <a href="recourcesMD.zip" class="rcorners" download="recourcesMD.zip"> >Download MARKDOWN</a>
+    <a href="recourcesPDF.zip" class="rcorners" download="recourcesPDF.zip"> >Download PDF</a>
+  </div>
+
+  <!-- Text -->
+    <h2 class="green">Über dieses Kapitel<h2>
+      <p>In Kapitel 1 habe ich die Grundfunktionen von Java Processing kennenglernt und ein Gefühl für den Syntax bekommen. Zwar hatte ich schon Programmier erfahrung mit Phython und C, doch vieles war auch neu, da ich noch nie mit graphischen Werkzeugen gearbeitet habe. <br>
+      </p>
+      <span class="infotext"><span class="purple">INFO:</span> Der Download ist jeweils ein zu .ZIP komprimierter Ordner, welcher ALLE chapter beinhaltet. In dem PDF werden die GIF nicht geladen, aber für MARKDOWN wird ein entsprechender Editor benötigt (Ich verwende Joplin). Zwar funktionieren bei mir in Markdowb die GIFS, allerding kann ich nicht überprüfen ob sie auch bei dem download gehen. </span>
+
+</center>
+<!--Floating Home Button-->
+  <div class="fab-container">
+    <button class="fab-icon-holder" onclick="window.location.href='../../index.html'">>HOME</button>
+</div>
+</body>
+</html>
+
+<script>
+  function download(file, text) {
+              
+    //creating an invisible element
+    var element = document.createElement('a');
+    element.setAttribute('href', 
+    'data:text/plain;charset=utf-8, '
+    + encodeURIComponent(text));
+    element.setAttribute('download', file);
+              
+    // Above code is equivalent to
+    // <a href="path of file" download="file name">
+              
+    document.body.appendChild(element);
+              
+    //onClick property
+    element.click();
+              
+    document.body.removeChild(element);
+    }
+              
+    // Start file download.
+    document.getElementById("btn")
+    .addEventListener("click", function() {
+    // Generate download of hello.txt 
+    // file with some content
+    var text = document.getElementById("text").value;
+    var filename = "GFG.txt";
+              
+    download(filename, text);
+    }, false);
+    
+</script>
