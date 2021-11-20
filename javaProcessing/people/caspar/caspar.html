@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html lang="de">
-
-</html>
+<html lang="de"></html>
 <link rel="stylesheet" href="../../style.css">
+<!-- highlight JS -->
+<link rel="stylesheet" href="../../tomorrow-night-bright.min.css">
 <script src="=script.js"></script>
+<script type="text/javascript" src="../../processing.js"></script>
+<script src="../../highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+  function download(file, text) {
+              
+    //creating an invisible element
+    var element = document.createElement('a');
+    element.setAttribute('href', 
+    'data:text/plain;charset=utf-8, '
+    + encodeURIComponent(text));
+    element.setAttribute('download', file);
+                  
+    document.body.appendChild(element);
+              
+    //onClick property
+    element.click();
+              
+    document.body.removeChild(element);
+    }
+              
+    // Start file download.
+    document.getElementById("btn")
+    .addEventListener("click", function() {
+    // Generate download of hello.txt 
+    // file with some content
+    var text = document.getElementById("text").value;
+    var filename = "GFG.txt";
+              
+    download(filename, text);
+    }, false);
+</script>
+<!-- End script -->
 
 <html>
 <body>
@@ -14,14 +47,6 @@
 			<div class="dropdown">
         <!--Vincent-->
 				<button class="dropbtn" onclick="window.location.href='/people/vincent/vincent.html'">>Vincent</button>
-            <div class="dropdown-content">
-              <a href="#" class="rcorners">Chapter 1</a>
-              <a href="#" class="rcorners">Chapter 2</a>
-              <a href="#" class="rcorners">Chapter 3</a>
-              <a href="#" class="rcorners">Chapter 4</a>
-              <a href="#" class="rcorners">Chapter 5</a>
-              <a href="#" class="rcorners">Chapter 6</a>
-              </div>
             </div>
             <div class="dropdown">
               <!--Ruben-->
@@ -37,17 +62,7 @@
             </div>
             <div class="dropdown">
               <!--Caspar-->
-               <button class="dropbtn" onclick="window.location.href='/people/caspar/caspar.html'" >
-                 >Caspar
-               </button>
-            <div class="dropdown-content">
-              <a href="#" class="rcorners">Chapter 1</a>
-              <a href="#" class="rcorners">Chapter 2</a>
-              <a href="#" class="rcorners">Chapter 3</a>
-              <a href="#" class="rcorners">Chapter 4</a>
-              <a href="#" class="rcorners">Chapter 5</a>
-              <a href="#" class="rcorners">Chapter 6</a>
-              </div>
+				<button class="dropbtn" onclick="window.location.href='/people/caspar/caspar.html'">>Caspar</button>
             </div>
             <div class="dropdown">
               <!--Raphael-->
@@ -66,23 +81,1249 @@
     </nav>
 <!-- End navbar-->
 
-  <!-- Main content -->
-  <h1>Hekerman;</h1>
-  <img src="HackerCasparLight.jpg" alt="Caspar" style="width: 200px;">
-    <p>Github: <span class="yellow"> CasCodes</span></p>
-    <p>Mail: <span class="yellow"> caspar.pagel@gmx.de</span></p>
-  <h2>void about(wasIchGelerntHabe){</h2>
-    <p>Lorem impsum</p>
-  <h2>}<br>void about(meineLiebsteAufgabe){</h2>
-    <p>Lorem impsum</p>
-  <h2>}<br>void about(){ </h2>
-    <p>Lorem impsum</p>
-  <h2>}</h2>
+<!-- Dropdown menu -->
+  <div class="dropdown">
+  <div class="dropdown-content-person" style="bottom: 200px;">
+    <div><a href="#" class="rcorners">>Profile</a></div>
+    <div><a href="#chapter_1" class="rcorners">>Chapter 1</a></div>
+    <div><a href="#chapter_2" class="rcorners">>Chapter 2</a></div>
+    <div><a href="#chapter_3" class="rcorners">>Chapter 3</a></div>
+    <div><a href="#chapter_5" class="rcorners">>Chapter 5</a></div>
+    <div><a href="#chapter_6" class="rcorners">>Chapter 6</a></div>
+   </div></div>
   
-  <!--Floating Home Button-->
+  <!-- ABOUT content -->
+  <h1>Caspar;</h1>
+  <img src="pixelCas_Blue.png" alt="Caspar" style="width: 200px;">
+    <p>Github: <span class="yellow"> CasCodes</span></p>
+  <h2>void about(me){</h2>
+    <p>Moin, ich bin Caspar Pagel. <br> Zusammen mit Vincent  habe ich diese Website als Lerntagebuch gemacht. Das war unser erster Versuch im Web-Development, also ist die Seite nicht genau so geworden wie wir es uns vorgestellt haben, wir sind aber dennoch zufrieden.
+     Im Lernpfad bin ich bis Aufgabe 6.5a gekommen und Processing zu lernen war definitv interssant. <br>Meiner Meinung nach hat Processing einige Ähnlichkeiten mit C, was mir durch Vorerfahrungen einiges erleichtert hat.
+    </p>
+  <h2>}<br>void about(meineLiebsteAufgabe){</h2>
+    <p>Zu meinen Lieblingsaufgaben gehört 2.5c(Miniverse), weil ich die Idee einfach ziemlich cool finde. <br>
+    Am besten war allterings Pong. In Pong habe ich nach eigener Schätzung die Hälfte der Zeit, in der ich "an der Website gearbeitet" habe, verbracht 
+    </p>
+  <h2>}<br>void about(info){ </h2>
+    <p>Info: Der folgende Code wurde ab 2.1d mit einem Perl Skript von mir automatisch in html eingefügt, also kann es sein dass es teilweise nicht so gut aussieht, aber solange es funktioniert... Zu meiner Verteidigung: Es gibt ja noch die pdf/markdown Dateien und das Skript ist sehr cool geworden! (Sie finden es auf GitHub)
+    Auf der Website habe nur die wichtigsten Aufgaben, damit die Seite nicht zu lang wird und sich der interaktive Code lohnt.
+    </p>
+  <h2>}</h2>
+
+
+    <!--Floating Home Button-->
   <div class="fab-container">
     <button class="fab-icon-holder" onclick="window.location.href='../../index.html'">>HOME</button>
 </div>
-</cent
-</body> 
+
+<!-- TASKS MAIN CONTENT-->
+
+<!-- Download Buttons -->
+  <div class="vertical-buttons">
+    <p>Download all chapters</p>
+    <a href="Processing.zip" class="rcorners" download="ProcessingMD.zip"> >MARKDOWN</a>
+    <a href="resources.zip" class="rcorners" download="_resources.zip"> >Images/GIFs</a>
+    <a href="CasparProcessingPDF.zip" class="rcorners" download="ProcessingPDF.zip"> >PDF</a>
+  </div>
+
+<h1 id="chapter_1">Chapter 1</h1>
+
+<!-- CODE BLOCK 1.1-->
+<h2 class="green">1.1</h2>
+<h2 class="purple" >a, b, c, d & e)</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_1_1_a">
+  <!-- Paste code here -->
+//  1.1 a
+// Ein Haus aus Dreieck und Quadrat
+
+void setup()
+{
+  size(500, 500);
+  background(0);
+}
+void draw()
+{
+  //rectMode(CENTER);
+  triangle(250, 250, 200, 300, 300, 300);
+  rect(200, 300, 100, 100);
+}
+// 1.1 b
+// Halbkreis
+
+void setup()
+{
+  size(500, 500);
+  background(0);
+}
+
+void draw()
+{
+  arc(250, 250 , 250 ,250, PI, 2*PI);
+}
+//1.1c
+// Haus mit Vertex
+
+void setup()
+{
+  size(500, 500);
+  background(0);
+}
+
+void draw()
+{
+  beginShape();
+  //vertex(250, 250);
+  vertex(300, 300);
+  vertex(300, 400);
+  vertex(200, 400);
+  vertex(200, 300);
+ 
+  vertex(300, 300);
+  vertex(250, 250);
+  vertex(200, 300);
+  endShape();
+}
+// 1.1 d
+// Mehr oder weniger Drudenfuß
+
+void setup()
+{
+  size(500, 500);
+  background(0);
+}
+
+
+void draw()
+{
+  beginShape();
+  
+  vertex(200, 230);
+  vertex(130, 400);
+  vertex(300, 300);
+  vertex(100, 300);
+  vertex(270, 400);
+  vertex(200, 230);
+  
+  endShape();
+}
+// 1.1 e
+// Smugface :)
+
+void setup()
+{
+  size(500, 500);
+  background(0);
+}
+
+
+void draw()
+{
+  ellipseMode(CENTER);
+  //Kopf
+  ellipse(250, 250, 200, 200);
+  //Augen
+  ellipse(200, 230, 30, 30);deine Zeit
+  ellipse(300, 230, 30, 30);
+  //Nase
+  triangle(250, 230, 230, 250, 270, 250);
+  //Mund
+  arc(250, 270, 150, 100, radians(0), radians(180));
+}
+// 1.1 f
+//Pyramide
+//50x50 Quadrate in 50er Schritten verschoben. Pro Reihe um halbe Breite des //Quadrats (0.25) verschoben
+
+void setup()
+{
+  size(500, 500);
+  background(0);
+}
+
+
+void draw()
+{
+  //50er SChritte in x und 
+  rect(100,400, 50, 50);
+  rect(150,400, 50, 50);
+  rect(200,400, 50, 50);
+  rect(250,400, 50, 50);
+  
+  //Um halbe Breite verschoben
+  rect(125, 350, 50, 50);
+  rect(175, 350, 50, 50);
+  rect(225, 350, 50, 50);
+  
+  rect(150, 300, 50, 50);
+  rect(200, 300, 50, 50);
+  
+  rect(175, 250, 50, 50); 
+}
+</code></pre>
+<!-- img block -->
+<div class="task_pde_holder">
+   <div class="task_pde">
+     <h2 class="purple">RESULT:</h2>
+<div class="task_pde">
+  <img class="pde-doc" src="./pde_docs/1_1.png"/>
+</div>
+</div>
+</div>
+<!-- END CODE BLOCK 1.1-->
+
+<!-- CODE BLOCK 1.2-->
+<h2 class="green">1.2</h2>
+<h2 class="purple" >a, b, d & e)</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_1_1_a">
+  <!-- Paste code here -->
+//1.2 a
+//0 ist Schwarz (ellipse)
+//255 ist Weiß (rect, triangle)
+
+//Ellipse und Rect sind schwarz
+//Triangle
+
+//1.2 b
+//Viereck. Weiß links Schwarz rechts.
+
+void setup()
+{
+  size(500, 500);
+  background(69);
+}
+
+
+void draw()
+{
+  fill(255);
+  rect(50, 50, 70, 150);
+  fill(0);
+  rect(120, 50, 70, 150);
+}
+//1.2 d
+//Gesicht mit schlechten Zähnen
+
+void setup()
+{
+  size(500, 500);
+  background(69);
+}
+
+
+void draw()
+{
+  ellipseMode(CENTER);
+  //Kopf
+  fill(0);
+  ellipse(250, 250, 200, 200);
+  //Augen
+  fill(255);
+  ellipse(230, 230, 40, 40);
+  ellipse(270, 230, 40, 40);
+  //Pupillen
+  fill(0);
+  ellipse(230, 230, 10, 10);
+  ellipse(270, 230, 10, 10);
+  
+  fill(255);
+  ellipse(210, 300, 30, 30);
+  ellipse(290, 300, 30, 30);
+  rect(210, 285, 80, 30);
+  
+  line(190, 300, 310 , 300);
+  
+  line(240, 285, 240, 320);
+  line(270, 285, 270, 320);
+}
+//1.2 e
+//Regenbogen
+
+void setup()
+{
+  size(500, 500);
+  background(0, 0, 255);
+}
+void draw()
+{
+  ellipseMode(CENTER);
+  
+  fill(200, 0 ,0);
+  ellipse(250, 500, 500, 500);
+  
+  fill(250, 158 ,43);
+  ellipse(250, 500, 400, 400);
+  
+  fill(250, 200 ,43);
+  ellipse(250, 500, 300, 300);
+  
+  fill(0, 0 ,255);
+  ellipse(250, 500, 200, 200);
+}
+</code></pre>
+<div class="task_pde_holder">
+   <div class="task_pde">
+     <h2 class="purple">RESULT:</h2>
+<!-- img block -->
+<div class="task_pde_holder">
+   <div class="task_pde">
+     <h2 class="purple">RESULT:</h2>
+<div class="task_pde">
+  <img class="pde-doc" src="./pde_docs/1_2.png"/>
+</div>
+</div>
+</div>
+<!-- END CODE BLOCK 1.2-->
+
+<!-- CHAPTER 2 -->
+<h1 id="chapter_2">Chapter 2</h1>
+<!-- CODE BLOCK 2.1b, c-->
+<h2 class="green">2.1</h2>
+<h2 class="purple" >b, c</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_1_1_a">
+  <!-- Paste code here -->
+// 2.1 b
+// x-Position des Cursors
+void draw(){
+   int x = mouseX;
+   println(x);
+}
+</code></pre>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_1_1_a">
+  <!-- Paste code here -->
+// 2.1 c
+// Linie die von P(0|0) ausgehend dem Cursor folgt
+
+void draw(){
+  background(69);
+  
+  strokeWeight(5);
+  line(0, 0, mouseX, mouseY);
+}
+</code></pre>
+<div class="task_pde_holder">
+   <div class="task_pde">
+     <h2 class="purple">RESULT:</h2>
+<div class="task_pde">
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches/sketch_2_1c.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+<!-- 2.1 d -->
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_1_1_a">
+  <!-- Paste code here -->
+// 2.1 d
+// Je nach X-Position des Cursors wird die Größe des Quadrats verändert
+
+void setup(){
+  
+  size(500, 500);
+  rectMode(CENTER);
+  strokeWeight(3);
+}
+
+void draw(){
+  background(69);
+  
+  int size = mouseX;
+  fill(0, 0, 69);
+  rect(250, 250, size, size);
+}
+</code></pre>
+<div class="task_pde_holder">
+   <div class="task_pde">
+     <h2 class="purple">RESULT:</h2>
+<div class="task_pde">
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches/sketch_2_1d.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+<!-- script generated -->
+
+<!-- End chapter 2 -->
+
+
+
+
+
+
+
+
+
+ <!--2_1_e--> 
+<h2 class="green">2_1</h2>
+<h2 class="purple" >e</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_1_e">
+void setup(){
+  
+  size(500, 500);
+  strokeWeight(3);
+}
+
+void draw(){
+  background(69);
+  
+  line(-height, mouseY, height, mouseY);
+  line(mouseX, -width, mouseX, width);
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_1_e.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_1_f--> 
+<h2 class="green">2_1</h2>
+<h2 class="purple" >f</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_1_f">
+void setup(){
+  
+  size(500, 500);
+  strokeWeight(3);
+}
+
+void draw(){
+  background(69);
+  
+  line(mouseX, -width, mouseX, width);
+  ellipse(mouseX/2, height/2, mouseX, mouseX);
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_1_f.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_1_g--> 
+<h2 class="green">2_1</h2>
+<h2 class="purple" >g</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_1_g">
+void setup(){
+  
+  size(500, 500);
+  
+  background(69);
+  
+  fill(0, 0, 76);
+  rect(50, 50, 400, 400);
+  
+}
+
+void draw(){
+
+  noStroke();
+  fill(75);
+  ellipse(mouseX, mouseY, 15, 15);
+  
+  
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_1_g.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_1_m--> 
+<h2 class="green">2_1</h2>
+<h2 class="purple" >m</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_1_m">
+void setup() {
+  size(500,500);
+  strokeWeight(3);
+  translate(250, 250);
+  
+}
+
+void draw() {
+  background(69);
+  
+  fill(0, 0, 0, 0);
+  ellipse(250, 250, 400, 400);
+  
+  //-cos damit der Zeiger oben anfängt, 
+  //*0.72 um mouseY in Teile von 360 umzuwandeln * 200 für länge
+  float y = height/2 -cos(radians(mouseY*0.72)) * 200;
+  float x = height/2 + sin(radians(mouseY*0.72)) * 200;
+  
+  line(250, 250, x, y);
+
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_1_m.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_2_a--> 
+<h2 class="green">2_2</h2>
+<h2 class="purple" >a</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_2_a">
+void setup(){
+  size(500, 500);
+  rectMode(CENTER);
+  background(69);
+}
+
+void draw(){
+}
+
+void mousePressed(){
+  fill(random(255));
+  rect(random(500), random(500),random(5, 41) ,random(5, 41));
+} 
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_2_a.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_3_b--> 
+<h2 class="green">2_3</h2>
+<h2 class="purple" >b</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_3_b">
+void setup(){
+  size(500, 500);
+}
+
+
+void draw(){
+  float x = mouseX;
+  float y = mouseY;
+  
+  background(69);
+  
+  ellipseMode(CENTER);
+  //Kopf
+  fill(200, 200, 0);
+  ellipse(x, y, 200, 200);
+  //Augen
+  ellipse(x-40, y-20, 30, 30);
+  ellipse(x+40, y-20, 30, 30);
+  //Mund
+  arc(x, y, 150, 100, radians(0), radians(180));
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_3_b.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_4_f--> 
+<h2 class="green">2_4</h2>
+<h2 class="purple" >f</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_4_f">
+int radius = 25;
+int movement = 0;
+
+void setup() {
+  size(500,500);
+  strokeWeight(3);
+  translate(250, 250);
+  
+}
+
+void draw() {
+  background(69);
+  
+  fill(70, 100, 60);
+  ellipse(250, 250, 50, 50);
+  fill(0, 0, 0, 0);
+  float y = height/2 -cos(radians(movement)) * 150;
+  float x = height/2 + sin(radians(movement)) * 150;
+  movement ++;
+  
+  fill(50, 0, 200);
+  ellipse(x, y, 30, 30);
+  float y2 = y -cos(radians(movement*5)) * 50;
+  float x2 = x + sin(radians(movement*5)) * 50;
+  
+  fill(200, 0, 0);
+  ellipse(x2, y2, 30, 30);
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_4_f.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_5_b--> 
+<h2 class="green">2_5</h2>
+<h2 class="purple" >b</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_5_b">
+// Position/Größe des Rechtecks
+float x = 300;
+float y = 300;
+float w = 150;
+float h = 150;
+
+void setup() {
+  size(500, 500);
+}
+
+void draw() {
+  background(0);
+  stroke(255);
+  noFill();
+  rect(x, y, w, h);
+  fill(255);
+  ellipse(mouseX, mouseY, 10, 10); // Mauszeiger
+  
+  fill(255);
+  ellipse(mouseX*0.3+300, (mouseY*0.3)+300, 5, 5);
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_5_b.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--2_6_a--> 
+<h2 class="green">2_6</h2>
+<h2 class="purple" >a</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_2_6_a">
+int x = 0;
+int y = 0;
+
+void setup(){
+  size(500, 500);
+  strokeWeight(1);
+  background(200);
+}
+void draw(){
+  stroke(0+(x*0.4));
+  line(x, 0, x, y);
+  x ++;
+  y ++;
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_2_6_a.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--3_1_g--> 
+<h2 class="green">3_1</h2>
+<h2 class="purple" >g</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_3_1_g">
+int s = 0;
+void setup(){
+  size(500, 500);
+}
+
+void draw() {
+  background(69);
+  noFill();
+  ellipse(250, 250,s, s);
+  s+=5;
+  if (s > 500){
+    s = 0;
+  } 
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_3_1_g.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--3_1_k--> 
+<h1 id="chapter_3">Chapter 3</h1>
+<h2 class="green">3_1</h2>
+<h2 class="purple" >k</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_3_1_k">
+int x = 0;
+void setup(){
+  size(500, 500);
+  strokeWeight(2);
+}
+
+void draw(){
+  background(69);
+  noFill();
+  stroke(255);
+  ellipse(250, 250, 400, 400);
+  fill(250);
+  
+  arc(250, 250, 400, 400, -0.5*PI, radians(x*360/width)-0.5*PI);
+  x+=5;
+  
+  if (x > 500){
+    x = 0;
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_3_1_k.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--3_3_c--> 
+<h2 class="green">3_3</h2>
+<h2 class="purple" >c</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_3_3_c">
+int a = 50;
+int g = 2;
+
+void setup() {
+  strokeWeight(3);
+  size(500, 500);
+}
+
+void draw() {
+  background(69);
+  ellipse(width/2, height/2, a, a);
+  a += g;
+  println(a);
+  if (a >= width || a < 50){
+    g = -g;
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_3_3_c.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--3_3_e--> 
+<h2 class="green">3_3</h2>
+<h2 class="purple" >e</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_3_3_e">
+int a = 0;
+int c = 250;
+
+void setup() {
+  size(500, 500);
+  strokeWeight(3);
+}
+void draw() {
+  background(69);
+  line(350,0, 350, 500);
+  line(150,0, 150, 500);
+  
+  fill(250, c, c);
+  ellipse(a, 250, 100, 100);
+  a+=2;
+  if (a > width){
+    a = 0;
+  }
+  if (a > 150 && a < 350){
+    c = 0;
+  }
+  else{
+    c = 255;
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_3_3_e.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--3_4_c--> 
+<h2 class="green">3_4</h2>
+<h2 class="purple" >c</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_3_4_c">
+boolean isSq = false;
+void setup(){
+  background(0);
+  size(500, 500);
+  rectMode(CENTER);
+}
+void draw(){
+  if (isSq == false){
+    fill(250);
+    ellipse(mouseX, mouseY, 100, 100);
+  }
+  if (isSq == true){
+    fill(0);
+    rect(mouseX, mouseY, 100, 100);
+  }
+}
+void mousePressed(){
+  if (isSq == true){
+    isSq = false;
+  }
+  else{
+    isSq = true;
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_3_4_c.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--3_6_b--> 
+<h2 class="green">3_6</h2>
+<h2 class="purple" >b</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_3_6_b">
+int r;
+int g;
+int b;
+
+int x1 = 100;
+int x2 = 200;
+int y1 = 100;
+int y2 = 200;
+void setup(){
+  size(500, 500);
+  strokeWeight(2);
+}
+
+void draw() {
+  background(69);
+  noFill();
+  rect(x1, y1, 250, 250);
+  rect(x2, y2, 250, 250);
+  
+  fill(r, g, b);
+  ellipse(mouseX, mouseY, 70, 70);
+  
+  if(x2 &lt; mouseX&&mouseX &lt; x2+250 && y2 &lt; mouseY&&mouseY &lt; y2+250 && x1 &lt; mouseX&&mouseX &lt; x1+250 && y1 &lt; mouseY&&mouseY &lt;  y1+250){
+    r = 0;
+    g = 0;
+    b = 250;
+  }
+  else if (x1 &lt; mouseX&&mouseX &lt; x1+250 && y1 &lt; mouseY&&mouseY &lt; y1+250){
+    r = 250;
+    g = 0;
+    b = 0;
+  }
+  else if (x2 &lt; mouseX&&mouseX &lt; x2+250 && y2 &lt; mouseY&&mouseY &lt; y2+250){
+    r = 0;
+    g = 250;
+    b = 0;
+  }
+  else {
+    r = 69;
+    g = 69;
+    b = 69;
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_3_6_b.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--3_6_g--> 
+<h2 class="green">3_6</h2>
+<h2 class="purple" >g</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_3_6_g">
+int lineY = 250;
+int rectX;
+float rectY = random(10, 490);
+int c = 0;
+int score = 0;
+void setup(){
+  size(500, 500);
+  strokeWeight(15);
+}
+void draw(){
+  background(69);
+  //Das Tor
+  stroke(c,0,0);
+  line(400, 0, 400, lineY);
+   line(400, 500, 400, lineY+100);
+  if (keyPressed && keyCode == DOWN){
+    lineY+=5;
+  }
+  if (keyPressed && keyCode == UP){
+    lineY-=5;
+  }
+  //Der Ball
+  fill(0);
+  rect(rectX, rectY, 10, 10);
+  rectX+=6;
+  if (rectX>500){
+    rectX = 0;
+    rectY = random(10, 490);
+  }
+  //Kollision
+  if (rectX == 390 && rectY < lineY || rectX == 390 && rectY > lineY+100){
+    c = 255;
+    score--;
+  }
+  else if (rectX == 390 && rectY > lineY || rectX == 390 && rectY < lineY+100){
+    score++;
+  } 
+  else{
+    c = 0;
+  }
+  textSize(20);
+  text(score, 30, 30);
+  //Reset score
+  if (keyPressed && key == 32){
+    score = 0;
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_3_6_g.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--5_2_j--> 
+ <h1 id="chapter_5">Chapter 5</h1>
+<h2 class="green">5_2</h2>
+<h2 class="purple" >j</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_5_2_j">
+void setup(){
+  size(500, 500);
+  strokeWeight(10);
+}
+void draw(){
+  translate(0, 500);
+  for(int x = 0; x<500; x+=22){
+    point(x, -pow(x/22, 2));
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_5_2_j.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--5_2_k--> 
+<h2 class="green">5_2</h2>
+<h2 class="purple" >k</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_5_2_k">
+float deg = 25;
+int rad = height/8;
+void setup() {
+  size(500,500);
+  strokeWeight(20);
+  translate(250, 250);
+  background(69);
+  
+}
+
+void draw() {
+  fill(0, 0, 0, 0);
+  while(rad &lt; 212){
+  //*0.72 um mouseY in Teile von 360 umzuwandeln * 200 für länge
+    float y = rad * cos(radians(deg*0.72)) + 250;
+    float x = rad * sin(radians(deg*0.72)) + 250;
+    deg+=12;
+    rad++;
+    point(x, y);
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_5_2_k.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--5_3_f--> 
+<h2 class="green">5_3</h2>
+<h2 class="purple" >f</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_5_3_f">
+int num = 1;
+void setup(){
+  size(500, 500);
+}
+void draw(){
+  background(69);
+  noFill();
+  int r = 50;
+  for (int i = 0; i < num; i++){
+    ellipse(250, 250, r, r);
+    r+=20;
+  }
+}
+void mousePressed(){
+  if (mouseButton == LEFT){
+     num+=1;
+  }
+  else if (mouseButton == RIGHT && num > 1){
+    num-=1;
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_5_3_f.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--6_3_b--> 
+ <h1 id="chapter_6">Chapter 6</h1>
+<h2 class="green">6_3</h2>
+<h2 class="purple" >b</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_6_3_b">
+int [] xpos = new int[10];
+int [] ypos = new int[10];
+int [] r = new int[10];
+int [] g = new int[10];
+int [] b = new int[10];
+int [] xspeed = new int[10];
+int [] yspeed = new int[10];
+
+void setup(){
+  size(500, 500);
+    //fill arrays
+  for (int i = 0; i &lt; xpos.length; i++){
+    xpos[i] = int(random(width));
+    ypos[i] = int(random(height));
+    r[i] = int(random(255));
+    g[i] = int(random(255));
+    b[i] = int(random(255));
+    while (xspeed[i] == 0){
+      xspeed[i] = int(random(-3, 3));
+    }
+    while (yspeed[i] == 0){
+      yspeed[i] = int(random(-3, 3));
+    }
+  }
+}
+
+void draw(){
+  background(0);
+  for (int i = 0; i &lt; xpos.length; i++){
+    fill(r[i], g[i], b[i]);
+    ellipse(xpos[i], ypos[i], 20, 20);
+    xpos[i]+=xspeed[i];
+    ypos[i]+=yspeed[i];
+    
+      //wall collision
+    if (xpos[i] > width || xpos[i] &lt; 0){
+      xspeed[i] = -xspeed[i];
+    }
+    else if (ypos[i] > height || ypos[i] &lt; 0){
+      yspeed[i] = -yspeed[i];
+    }
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_6_3_b.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--6_3_e--> 
+<h2 class="green">6_3</h2>
+<h2 class="purple" >e</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_6_3_e">
+int [] xpos = new int[10];
+int [] ypos = new int[10];
+int [] r = new int[10];
+int [] g = new int[10];
+int [] b = new int[10];
+int [] xspeed = new int[10];
+int [] yspeed = new int[10];
+boolean [] rect = new boolean[10];
+
+int xplayer = width/2;
+int yplayer = height/2;
+
+void setup(){
+  size(500, 500);
+  for (int i = 0; i &lt; xpos.length; i++){
+    xpos[i] = int(random(width));
+    ypos[i] = int(random(height));
+    r[i] = int(random(255));
+    g[i] = int(random(255));
+    b[i] = int(random(255));
+    while (xspeed[i] == 0){
+      xspeed[i] = int(random(-3, 3));
+    }
+    while (yspeed[i] == 0){
+      yspeed[i] = int(random(-3, 3));
+    }
+  }
+}
+
+void draw(){
+  background(0);
+  for (int i = 0; i &lt; xpos.length; i++){
+    noStroke();
+    if (rect[i] == false){
+      fill(r[i], g[i], b[i], 90);
+    }
+    // fill with transperancy if switch pressed
+    else if (rect[i] == true){
+      fill(r[i], g[i], b[i], 0);
+    }
+    ellipse(xpos[i], ypos[i], 50, 50);
+    xpos[i]+=xspeed[i];
+    ypos[i]+=yspeed[i];
+    
+    if (xpos[i] > width || xpos[i] &lt; 0){
+      xspeed[i] = -xspeed[i];
+    }
+    else if (ypos[i] > height || ypos[i] &lt; 0){
+      yspeed[i] = -yspeed[i];
+    }
+  
+    if (keyPressed){
+      if (keyCode == RIGHT && xplayer < width){
+        xplayer++;
+      }
+      else if (keyCode == LEFT && xplayer > 0){
+        xplayer--;
+      }
+      else if (keyCode == UP && yplayer > 0){
+        yplayer--;
+      }
+      else if (keyCode == DOWN && yplayer < height){
+        yplayer++;
+      }
+    }
+    // collision
+    if (xplayer > xpos[i]-25 && xplayer < xpos[i]+25 && yplayer > ypos[i]-25 && yplayer < ypos[i]+25){
+      rect[i] = true;
+    }
+  }
+  //player
+  fill(255, 0, 0);
+  ellipse(xplayer, yplayer, 30, 30);
+  
+  // winning screen
+  boolean won = true;
+  for (int i = 0; i &lt; rect.length; i++){
+    if (rect[i] == false){
+      won = false;
+      break;    
+    }
+  }
+  if (won == true){
+    background(0);
+    textSize(20);
+    text("GEWONNEN!", 200, 200);
+  }
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_6_3_e.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+ <!--6_5_a--> 
+<h2 class="green">6_5</h2>
+<h2 class="purple" >a</h2>
+<pre class="code" style="position:relative; top:0px;">
+<code class="processing-html" id="task_6_5_a">
+int[] punktX = new int[100];
+int[] punktY = new int[100];
+int num = 0;
+
+void setup() {
+  size(500, 500);
+  background(69);
+}
+
+void draw() {
+  for (int i= 0; i < num; i++) {
+    fill(0);
+    ellipse(punktX[i], punktY[i], 10, 10);
+    
+    if ((num % 2)==0 || num>1){
+      line(punktX[num-1], punktY[num-1], punktX[num-2], punktY[num-2]);
+    }
+  }
+}
+
+void mousePressed() {
+  punktX[num] = mouseX;
+  punktY[num] = mouseY;
+  num++;
+}
+
+</code></pre><div class="task_pde_holder"> 
+  <div class="task_pde"> 
+    <h2 class="purple">RESULT:</h2>
+  <div class="task_pde"> 
+  <canvas class="pde-doc" id="theCanvas" data-processing-sources="./pde_docs/sketches//sketch_6_5_a.pde" style="image-rendering: !important;"></canvas>
+</div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+</center>
+</body>
 </html>
+
+<!--
+       ________________________________         
+      /                                "-_          
+     /      .  |  .                       \          
+    /      : \ | / :                       \         
+   /        '-___-'                         \      
+  /_________________________________________ \      
+       _______| |________________________--""-o 
+      /       o o                              \ 
+     /       o   o                              o
+    /      :'     ':     orion                  r
+   /        '-___-'                            / 
+  /_________________________________________--"  
+-->
