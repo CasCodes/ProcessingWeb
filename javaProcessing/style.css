@@ -164,6 +164,7 @@ p {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 /*Floating Home Button*/
 .fab-container {
   position: fixed;
@@ -195,6 +196,14 @@ p {
   box-shadow: 0 0 60px #4b5b61;
 }
 
+.pde-doc{ /*SIMP*/
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  box-shadow: 0 0 60px #4b5b61;
+}
+
 .code_field{
   background: #292929;
   border-radius:23px;
@@ -217,13 +226,6 @@ p {
   box-shadow: 10px 5px;
 }
 
-.top-left {
-  color: #BD6AF6;
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
 .task_letter {
   text-align: left;
   color: #BD6AF6;
@@ -232,4 +234,75 @@ p {
 
 .task_letter_holder {
   max-width: 600px;
+}
+
+.task_pde_holder{
+  max-width: 600px;
+  width: auto;
+  height: 250px;
+}
+
+.task_pde{
+  justify-self: start;
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.auto{
+  width: auto;
+  height: auto;
+}
+
+.dropdown-content-person {
+  border-radius: 16px;
+  position: fixed;
+  right: 20px;
+  display: block;
+  background-color: #292929;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  max-height: 150px;
+  max-width: 150px;
+  margin-left: 20px; 
+}
+
+.dropdown-content-person a {
+  float: none;
+  color: #EEC563;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.collapsible {
+  background-color: #292929;
+  font-family: monospace;
+  border-radius: 25px;
+  padding: 5px; 
+  margin-top: 10px;
+  color: #EEC563;
+  cursor: pointer;
+  width: auto;
+  border: none;
+  text-align: left; 
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #292929;
+  color:#18CF9E;
 }
