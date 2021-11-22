@@ -204,6 +204,14 @@ p {
   box-shadow: 0 0 60px #4b5b61;
 }
 
+.pde-doc2{ /*SIMP*/
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  box-shadow: 0 0 60px #4b5b61;
+}
+
 .code_field{
   background: #292929;
   border-radius:23px;
